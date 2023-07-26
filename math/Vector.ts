@@ -49,4 +49,9 @@ export default class Vector {
     public getMagnitude() : number {
         return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2) + Math.pow(this.z, 2));
     }
+
+    public toUnitVector() : Vector {
+        const m : number = this.getMagnitude();
+        if (m === 0) return new Vector(0, 0, 0);
+    }
 }

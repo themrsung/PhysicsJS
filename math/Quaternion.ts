@@ -35,7 +35,10 @@ export default class Quaternion {
         return q;
     }
 
+    public static fromAxisAngle(axis : Vector, angle : number) : Quaternion {
         
+        return Quaternion.fromScalarVector(Math.cos(angle / 2), axis);
+    }
 
     private w : number;
     private x : number;
